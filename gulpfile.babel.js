@@ -12,5 +12,9 @@ gulp.task('serve', () => {
     server.notify.apply(server, [file]);
   });
 
-  gulp.watch('app.js', server.start.bind(server));
+  gulp.watch('app.js', () => {
+    server.start.bind(server)();
+  });
 });
+
+gulp.task('default', ['serve']);

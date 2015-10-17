@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+require('babel/register');
+
 var debug = require('debug')('Tropos-React');
 var app = require('../app');
 
