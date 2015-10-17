@@ -1,0 +1,25 @@
+# misc
+.DS_Store
+
+# Compiled sources
+*.log
+
+# built files
+build
+server/views/**/*.dust.js
+
+# local-only files
+server/config/local.js
+
+# node libraries
+node_modules
+dump.rdb
+
+# bower
+bower_components
+
+.idea/
+*.iml
+
+#test fails and other screenshots
+spec/screenshots
