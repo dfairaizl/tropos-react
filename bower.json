@@ -18,6 +18,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "~3.3.5"
+    "bourbon": "~4.2.6",
+    "neat": "~1.7.2"
   }
 }

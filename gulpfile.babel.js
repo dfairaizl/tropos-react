@@ -4,7 +4,12 @@ import sass from 'gulp-sass';
 
 gulp.task('build:style', () => {
   gulp.src('assets/styles/**/*.scss')
-      .pipe(sass().on('error', sass.logError))
+      .pipe(sass({
+        includePaths: [
+          'bower_components/bourbon/app/assets/stylesheets/',
+          'bower_components/neat/app/assets/stylesheets/'
+        ]
+      }).on('error', sass.logError))
       .pipe(gulp.dest('./build/styles'));
 });
 
@@ -37,4 +42,4 @@ gulp.task('serve', () => {
   });
 });
 
-gulp.task('default', ['serve', 'watch']);
+gulp.task('default', ['build', 'watch', 'serve']);
