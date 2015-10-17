@@ -12,7 +12,8 @@ gulp.task('serve', () => {
     server.notify.apply(server, [file]);
   });
 
-  gulp.watch('app.js', () => {
+  gulp.watch(['app.js', 'routes/*.js'], () => {
+    console.log('restarting server');
     server.start.bind(server)();
   });
 });
