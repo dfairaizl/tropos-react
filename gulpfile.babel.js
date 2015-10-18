@@ -1,6 +1,17 @@
 import gulp from 'gulp';
 import gls from 'gulp-live-server';
 import sass from 'gulp-sass';
+import newer from 'gulp-newer';
+
+gulp.task('build:font', () => {
+  return gulp.src(['assets/fonts/**/*'])
+    .pipe(newer('build/fonts'))
+    .pipe(gulp.dest('build/fonts'));
+});
+
+gulp.task('watch:font', function () {
+  gulp.watch('./assets/fonts/*.otf', ['build:font']);
+});
 
 gulp.task('build:style', () => {
   gulp.src('assets/styles/**/*.scss')
@@ -13,13 +24,9 @@ gulp.task('build:style', () => {
       .pipe(gulp.dest('./build/styles'));
 });
 
-gulp.task('sass:watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
+gulp.task('watch:style', function () {
+  gulp.watch('./assets/styles/main.scss', ['build:style']);
 });
-
-gulp.task('watch', ['sass:watch']);
-
-gulp.task('build', ['build:style']);
 
 gulp.task('serve', () => {
   let server = gls.new('./bin/www', {
@@ -42,4 +49,8 @@ gulp.task('serve', () => {
   });
 });
 
-gulp.task('default', ['build', 'watch', 'serve']);
+gulp.task('watch', ['watch:style', 'watch:font']);
+
+gulp.task('build', ['build:style', 'build:font']);
+
+gulp.task('default', ['build', 'serve', 'watch']);

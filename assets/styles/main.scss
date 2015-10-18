@@ -1,6 +1,76 @@
 @import "bourbon";
 @import "neat";
 
+@include font-face("walkaway-semibold", "/fonts/Walkway_SemiBold-webfont", $file-formats: eot woff ttf svg);
+
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: rgb(66, 115, 161);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+  height: 100%;
+}
+
+div:nth-child(1) {
+  flex-basis: 25%;
+  align-self: center;
+}
+
+div:nth-child(2) {
+  flex-basis: 60%;
+
+  h1 {
+    margin: 40px;
+    font-family: "walkaway-semibold", sans-serif;
+    font-size: 180px;
+    font-weight: 100;
+    text-align: center;
+    color: #F3F3F3;
+  }
+}
+
+div:nth-child(3) {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+section {
+  width: 100%;
+  padding: 0px 10% 0px 10%;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+p {
+  width: 30px;
+  height: 30px;
+  font-family: "walkaway-semibold", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 4px;
+  color: #F3F3F3;
+
+  &.current {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+  }
+}
+
+figure {
+  width: 100px;
+  height: 100px;
+  margin-top: 30%;
+  border-radius: 50px;
+  background-color: #F3F3F3;
 }

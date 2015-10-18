@@ -1,16 +1,43 @@
 import React from 'react';
-
+import Icon from './components/icon';
 import Temperature from './components/temperature';
+import Calendar from './components/calendar';
 
 class IndexView extends React.Component {
   render() {
     return (
-      <html>
+      <html lang="en-US">
         <head>
-          <title>Tropos | Kick Ass Weather</title>
+          <title>{this.props.title}</title>
+
+          <meta charSet="utf-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="description" content={this.props.title} />
+          <meta name="author" content="Dan Fairaizl" />
+
+          <link href="/styles/main.css" rel="stylesheet" />
         </head>
         <body>
-          <Temperature></Temperature>
+          <main>
+            <div>
+              <figure></figure>
+            </div>
+            <div>
+              <h1>77<sup>°</sup></h1>
+            </div>
+            <div>
+              <section>
+                <p>S</p>
+                <p>M</p>
+                <p>T</p>
+                <p>W</p>
+                <p>T</p>
+                <p>F</p>
+                <p className="current">S</p>
+              </section>
+            </div>
+          </main>
         </body>
       </html>
     )
