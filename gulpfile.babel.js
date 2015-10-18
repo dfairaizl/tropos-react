@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import gls from 'gulp-live-server';
 import sass from 'gulp-sass';
 import newer from 'gulp-newer';
+import autoprefixer from 'gulp-autoprefixer';
 
 gulp.task('build:font', () => {
   return gulp.src(['assets/fonts/**/*', 'bower_components/weather-icons/font/*'])
@@ -21,6 +22,10 @@ gulp.task('build:style', () => {
           'bower_components/weather-icons/sass'
         ]
       }).on('error', sass.logError))
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+      }))
       .pipe(gulp.dest('./build/styles'));
 });
 
