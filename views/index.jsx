@@ -20,23 +20,9 @@ class IndexView extends React.Component {
         </head>
         <body>
           <main>
-            <div>
-              <figure></figure>
-            </div>
-            <div>
-              <h1>77<sup>°</sup></h1>
-            </div>
-            <div>
-              <section>
-                <p>S</p>
-                <p>M</p>
-                <p>T</p>
-                <p>W</p>
-                <p>T</p>
-                <p>F</p>
-                <p className="current">S</p>
-              </section>
-            </div>
+            <Icon></Icon>
+            <Temperature></Temperature>
+            <Calendar></Calendar>
           </main>
         </body>
       </html>

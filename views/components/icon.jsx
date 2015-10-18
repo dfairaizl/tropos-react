@@ -1,13 +1,11 @@
 import React from 'react';
 
-class Icon extends React.Component {
+export default class Icon extends React.Component {
   render() {
     return (
       <div>
-        <h1>Row 1</h1>
+        <figure></figure>
       </div>
     )
   }
 }
-
-export default Icon;
