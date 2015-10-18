@@ -49,7 +49,6 @@ gulp.task('serve', () => {
   });
 
   gulp.watch(['app.js', 'routes/*.js'], () => {
-    console.log('restarting server');
     server.start.bind(server)();
   });
 });
