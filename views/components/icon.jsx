@@ -4,7 +4,9 @@ export default class Icon extends React.Component {
   render() {
     return (
       <div>
-        <figure></figure>
+        <figure>
+          <i className="wi wi-day-sunny"></i>
+        </figure>
       </div>
     )
   }

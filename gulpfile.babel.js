@@ -4,7 +4,7 @@ import sass from 'gulp-sass';
 import newer from 'gulp-newer';
 
 gulp.task('build:font', () => {
-  return gulp.src(['assets/fonts/**/*'])
+  return gulp.src(['assets/fonts/**/*', 'bower_components/weather-icons/font/*'])
     .pipe(newer('build/fonts'))
     .pipe(gulp.dest('build/fonts'));
 });
@@ -18,7 +18,7 @@ gulp.task('build:style', () => {
       .pipe(sass({
         includePaths: [
           'bower_components/bourbon/app/assets/stylesheets/',
-          'bower_components/neat/app/assets/stylesheets/'
+          'bower_components/weather-icons/sass'
         ]
       }).on('error', sass.logError))
       .pipe(gulp.dest('./build/styles'));
