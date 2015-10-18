@@ -1,7 +1,7 @@
 @import "bourbon";
 @import "neat";
 
-@include font-face("walkaway-semibold", "/fonts/Walkway_SemiBold-webfont", $file-formats: eot woff ttf svg);
+@include font-face("quicksand", "/fonts/quicksand-light-webfont");
 
 html, body {
   height: 100%;
@@ -29,11 +29,16 @@ div:nth-child(2) {
 
   h1 {
     margin: 40px;
-    font-family: "walkaway-semibold", sans-serif;
+    font-family: "quicksand", sans-serif;
     font-size: 180px;
     font-weight: 100;
     text-align: center;
     color: #F3F3F3;
+  }
+
+  sup {
+    font-size: 60px;
+    vertical-align: text-top;
   }
 }
 
@@ -55,7 +60,7 @@ section {
 p {
   width: 30px;
   height: 30px;
-  font-family: "walkaway-semibold", sans-serif;
+  font-family: "quicksand", sans-serif;
   font-size: 20px;
   text-align: center;
   padding-top: 4px;
