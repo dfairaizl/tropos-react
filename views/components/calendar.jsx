@@ -5,13 +5,13 @@ export default class Calendar extends React.Component {
     return (
       <div>
         <section>
-          <p>S</p>
-          <p>M</p>
-          <p>T</p>
-          <p>W</p>
-          <p>T</p>
-          <p>F</p>
-          <p className="current">S</p>
+          <span><p>S</p></span>
+          <span><p>M</p></span>
+          <span><p>T</p></span>
+          <span><p>W</p></span>
+          <span><p>T</p></span>
+          <span><p>F</p></span>
+          <span className="current"><p>S</p></span>
         </section>
       </div>
     )
